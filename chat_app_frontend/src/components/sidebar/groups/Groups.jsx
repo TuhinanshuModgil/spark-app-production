@@ -8,7 +8,7 @@ function Groups() {
 
 
   return (
-    <div>
+    <div className='sm:py-2 py-1 flex flex-col overflow-auto'>
       {groups.map((group, idx) => (
         <Group key={group._id} group={group} lastIdx={idx === groups.length - 1} />
       ))}

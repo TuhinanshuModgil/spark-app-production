@@ -22,7 +22,7 @@ const Group = ({ group, lastIdx }) => {
 	return (
 		<>
 			<div
-				className={`flex gap-2 items-center hover:bg-gradient-pink-purple rounded cursor-pointer bg-secondary-dark-2 p-4
+				className={`flex gap-2 items-center hover:bg-gradient-pink-purple rounded cursor-pointer bg-secondary-dark-2 sm:p-4 p-2
 				${isSelected ? "bg-gradient-pink-purple" : ""}
 			`}
 				onClick={handleGroupSelected}

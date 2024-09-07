@@ -20,19 +20,20 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
 	return (
 		<>
 			<div
-				className={`flex gap-2 items-center hover:bg-gradient-pink-purple rounded p-4 cursor-pointer transition-colors bg-secondary-dark-2
+				className={`flex gap-2 items-center hover:bg-gradient-pink-purple rounded sm:p-4 p-2 cursor-pointer transition-colors bg-secondary-dark-2
 				${isSelected ? "bg-gradient-pink-purple" : ""}
 			`}
 				onClick={handleConversationSelected}
 			>
-				<div className='w-12 h-12 rounded-full flex items-center justify-center border border-gray-700 bg-gradient-yellow-orange'>
+				<div className='w-12 h-12 rounded-full flex items-center justify-center border border-gray-700 bg-gradient-yellow-orange relative'>
 					
 						{false ? (
 							<img src={conversation.profilePic} alt='user avatar' />
 						) : (
 							<span className='text-2xl font-bold capitalize text-offwhite'>{conversation.username.charAt(0)}</span>
 						)}
-		
+						{isOnline && <span className='absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full'></span>}
+
 				</div>
 
 				<div className='flex flex-col flex-1'>
