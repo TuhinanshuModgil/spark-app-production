@@ -6,8 +6,8 @@
 	"scripts": {
 		"server": "nodemon chat_app_backend/server.js",
 		"start": "node chat_app_backend/server.js",
-		"dev": "nodemon server.js",
-		"vercel-build": "echo hello"
+		"build": "npm install && npm install --prefix chat_app_frontend && npm run build --prefix chat_app_frontend",
+		"dev": "nodemon chat_app_backend/server.js"
 	},
 	"type": "module",
 	"keywords": [],

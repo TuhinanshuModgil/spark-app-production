@@ -29,6 +29,10 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/groups", groupRoutes);
 
+app.use(express.static(path.join(__dirname, "/chat_app_frontend/dist")));
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "chat_app_frontend", "dist", "index.html"));
+});
 // app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 // app.get("*", (req, res) => {
