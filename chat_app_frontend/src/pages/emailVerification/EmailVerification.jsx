@@ -9,8 +9,8 @@ function EmailVerification() {
         await signup({jwt:params.verificationToken})
     }
   return (
-    <div>
-      <button className='bg-red-300 p-4 rounded-sm' onClick={handleVerification}>Button</button>
+    <div className='bg-secondary-dark-1 h-screen w-screen flex items-center justify-center'>
+      <button className='bg-gradient-pink-purple p-4 rounded-sm font-bold text-xl text-white' onClick={handleVerification}>Start Chatting with Spark</button>
     </div>
   )
 }
