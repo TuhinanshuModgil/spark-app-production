@@ -13,6 +13,7 @@ export const sendVerificationEmail = async (email, verificationLink) => {
 		const mailOptions = {
 			from: process.env.EMAIL_USER,
 			to: email,
+			name: "Spark Chat App",
 			subject: "Email Verification",
 			html: `<p>Please click the link below to verify your email:</p><a href="${verificationLink}">Verify Email</a>`,
 		};
