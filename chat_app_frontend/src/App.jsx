@@ -21,7 +21,7 @@ function App() {
 		
 	//   },[]); // Runs once when the component is mounted
 	return (
-		<div className='h-dvh flex items-center justify-center'>
+		<div className='h-screen flex items-center justify-center'>
 			<Routes>
 				<Route path='/' element={jwtCookies ? <Home /> : <Navigate to={"/login"} />} />
 				<Route path='/login' element={jwtCookies ? <Navigate to='/' /> : <Login />} />
