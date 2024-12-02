@@ -12,6 +12,7 @@ export default {
 				"tertiary-orange": "#FE985D",
 				"tertiary-yellow": "#FDC830",
 				"offwhite": "#F3F3F3",
+				"gradient-pink-purple": 'linear-gradient(45deg, #FA3059, #8224CB)',
 			},
 			backgroundImage: {
 				'gradient-pink-purple': 'linear-gradient(45deg, #FA3059, #8224CB)',

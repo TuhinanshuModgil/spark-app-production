@@ -10,11 +10,8 @@ function useGetGroupMembers() {
     setLoading(true);
     const getGroupMembers = async () => {
       const res = await fetch(
-        `/api/groups/members/${
-          selectedConversation._id
-        }`,
+        `/api/groups/members/${selectedConversation._id}`,
         {
-          
           credentials: "include",
         }
       );

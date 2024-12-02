@@ -4,7 +4,7 @@ import { useAuthContext } from "../context/AuthContext";
 
 const useSignup = () => {
 	const [loading, setLoading] = useState(false);
-	const { setAuthUser } = useAuthContext();
+	const { setAuthUser, setJwtCookies } = useAuthContext();
 
 	const signup = async ({jwt}) => {
 		if(!jwt) return;
@@ -24,6 +24,7 @@ const useSignup = () => {
 				throw new Error(data.error);
 			}
 			localStorage.setItem("chat-user", JSON.stringify(data));
+			setJwtCookies(true)
 			setAuthUser(data);
 		} catch (error) {
 			toast.error(error.message);
@@ -45,8 +46,14 @@ const useSignup = () => {
 			});
 
 			const data = await res.json();
+			console.log("this is res data: ", data)
 			if (data.error) {
 				throw new Error(data.error);
+			}
+			else if(res.status == 201){
+				toast.success(data.message , {
+					duration: 4000
+				})
 			}
 			
 		} catch (error) {
