@@ -200,3 +200,12 @@ export const logout = (req, res) => {
 		res.status(500).json({ error: "Internal Server Error" });
 	}
 };
+
+export const checkLogin = (res , req) => {
+	try {
+		console.log("User passed protection verification")
+		res.status(201).json({message: "User is authenticated"})
+	} catch (error) {
+		
+	}
+}
